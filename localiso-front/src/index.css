@@ -1,0 +1,64 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.app { max-width: 1000px; margin: 0 auto; padding: 16px; }
+.centro { text-align: center; margin-top: 40px; }
+
+.topo {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px; margin-bottom: 16px;
+}
+.topo h1 { margin: 0; font-size: 24px; }
+.topo nav { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.usuario { color: #4b5563; margin: 0 8px; }
+
+.cartao {
+  background: #fff; border-radius: 10px; padding: 20px;
+  margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.cartao h2 { margin-top: 0; font-size: 18px; }
+.estreito { max-width: 380px; margin: 40px auto; }
+
+form { display: flex; flex-direction: column; gap: 12px; }
+.grade {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px; align-items: end;
+}
+label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: #374151; }
+input, select {
+  padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;
+}
+
+button {
+  padding: 8px 14px; border: none; border-radius: 6px;
+  background: #2563eb; color: #fff; font-size: 14px; cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: default; }
+button.ativo { background: #1e3a8a; }
+button.link { background: none; color: #2563eb; padding: 8px 0; margin-top: 8px; }
+
+.titulo-linha { display: flex; justify-content: space-between; align-items: center; }
+.check { flex-direction: row; align-items: center; gap: 6px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #e5e7eb; }
+
+.tag { padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.tag.ok { background: #dcfce7; color: #166534; }
+.tag.ocupado { background: #fef3c7; color: #92400e; }
+
+.previa { margin-bottom: 0; color: #374151; }
+
+.mensagem {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 14px; border-radius: 8px; margin-bottom: 16px;
+}
+.mensagem.sucesso { background: #dcfce7; color: #166534; }
+.mensagem.erro { background: #fee2e2; color: #991b1b; }
+.mensagem .fechar { background: none; color: inherit; font-size: 18px; padding: 0 4px; }
