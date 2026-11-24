@@ -6,21 +6,21 @@ Sistema web para cadastro de usuários, gerenciamento de veículos e registro de
 
 ## Tecnologias
 
-**Backend (`api/`)**
+**Backend (`localiso/`)**
 - Node.js + Express 5
 - Prisma ORM 7 + MySQL 8
 - Autenticação com JWT (jsonwebtoken)
 - Hash de senhas com bcrypt
 
-**Frontend (`front/`)**
+**Frontend (`localiso-front/`)**
 - React + Vite
 - Consumo da API com `fetch`
 
 ## Estrutura do projeto
 
 ```
-locadora/
-├── api/
+LOCALISO/
+├── localiso/
 │   ├── prisma/
 │   │   ├── schema.prisma        # modelos e relacionamentos
 │   │   └── migrations/          # histórico das tabelas
@@ -35,7 +35,7 @@ locadora/
 │       ├── routes/              # mapeamento dos endpoints
 │       ├── controllers/         # entrada e resposta HTTP
 │       └── services/            # validações e regras de negócio
-└── front/
+└── localiso-front/
     └── src/
         ├── api.js               # chamadas à API com token
         ├── formatar.js          # formatação de moeda e datas
@@ -61,7 +61,7 @@ Nas próximas vezes: `docker start locadora-mysql`.
 ### 2. Configurar e rodar a API
 
 ```bash
-cd api
+cd localiso
 npm install
 ```
 
@@ -89,7 +89,7 @@ npm run dev
 Em outro terminal:
 
 ```bash
-cd front
+cd localiso-front
 npm install
 npm run dev
 ```
